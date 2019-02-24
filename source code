@@ -1,0 +1,58 @@
+            ########atm configuration#########
+print('welcome to the punjab national bank')
+restart=("y")
+chances=5
+balance=10000
+while chances>=0:
+    pin=int(input("enter your four digit pin"))
+    if pin == (3214):
+            print("you entered right pin")
+            while restart not in ("n","no","N","NO"):
+                print("please press 1 for your balance\n")
+                print("please press 2 to make withdrawl\n")
+                print("please press 3 to pay in\n")
+                print("please press 4 to return card\n")
+                option=int(input("what would you like to choose?entere no. 1 to 4="))
+                if option == 1:
+                   print("your balance is rupees\n",balance)
+                   restart=input("would you like to go back?")
+                   if restart in ("n","no","N","NO"):
+                      print("thank you")
+                      break
+                elif option==2:
+                     option2=("y")
+                     withdrawl=float(input("how much u like to withdrawl"))
+                     if withdrawl != [20,30,40,50,100,10]:
+                        balance=balance-withdrawl
+                        print("your balance is now",balance)
+                        restart=input("would you like to go back?")
+                        if restart in("n","no","N","NO"):
+                           print("thank you")
+                           break
+                     elif withdrawl !=[10,20,30,40,50,100]:
+                          print("invalid ammount,please retype")
+                          restart=("y")
+                     elif withdrawl==1:
+                          withdrawl=float(input("enter in a desired ammount"))
+                elif option==3:
+                     pay_in=float(input("how much would you like to pay in?"))
+                     balance=balance+pay_in
+                     print("your new balance is now=",balance)
+                     restart=input("would you like to go back?")
+                     if restart in("n","no","N","NO"):
+                        print("thank you")
+                        break
+                elif option==4:
+                     print("please wait while your card is return,......")
+                     print("thankyou for your service")
+                     break
+                else:
+                     print("enter a correct no.")
+                     restart=("y")
+    elif pin!=("3214"):
+        print("incorrect password")
+        chances=chances-1
+        if chances ==0:
+            print("no more tries")
+            break
+print("have a good day")
